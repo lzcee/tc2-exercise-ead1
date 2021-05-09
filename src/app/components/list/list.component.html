@@ -1,0 +1,23 @@
+<section class="products">
+  <h2 class="products__title">Produtos</h2>
+  <table class="products__list">
+    <thead>
+      <tr>
+        <td>Título</td>
+        <td>Descrição</td>
+        <td>Preço</td>
+        <td></td>
+        <td></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{product.title}}</td>
+        <td>{{product.description}}</td>
+        <td>R$ {{product.price}}</td>
+        <td class="products__button" (click)="edit(product._id)">Editar</td>
+        <td class="products__button" (click)="delete(product._id)">Excluir</td>
+      </tr>
+    </tbody>
+  </table>
+</section>

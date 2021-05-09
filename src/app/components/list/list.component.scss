@@ -1,0 +1,38 @@
+.products {
+  &__list {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    color: #192125;
+
+    th,
+    td {
+      padding: 10px;
+    }
+
+    thead {
+      tr {
+        font-weight: bold;
+        background-color: #d6d6d6;
+      }
+    }
+
+    tbody {
+      tr {
+        &:nth-child(odd) {
+          background-color: #ffffff;
+        }
+
+        &:nth-child(even) {
+          background-color: #ececec;
+        }
+      }
+    }
+  }
+
+  &__button {
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}

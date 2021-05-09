@@ -1,0 +1,13 @@
+.header,
+.footer {
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    column-gap: 90px;
+    margin-bottom: 60px;
+  }
+}
