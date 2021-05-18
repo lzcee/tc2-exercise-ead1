@@ -15,9 +15,18 @@
         <td>{{product.title}}</td>
         <td>{{product.description}}</td>
         <td>R$ {{product.price}}</td>
-        <td class="products__button" (click)="edit(product._id)">Editar</td>
-        <td class="products__button" (click)="delete(product._id)">Excluir</td>
+        <td class="products__button" (click)="openEditConfirmationModal(product)">Editar</td>
+        <td class="products__button" (click)="openDeleteConfirmationModal(product)">Excluir</td>
       </tr>
     </tbody>
   </table>
 </section>
+<div *ngIf="deleteConfirmation" class="modal">
+  <div class="modal__wrapper">
+    <p>Deseja deletar o produto {{selectedProduct.title}}?</p>
+    <button class="modalBox__button modalBox__button--primary" (click)="delete(selectedProduct._id)">Sim</button>
+    <button class="modalBox__button modalBox__button--secondary" (click)="closeDeleteConfirmationModal()">Não</button>
+  </div>
+</div>
+<app-update *ngIf="editConfirmation" [selectedProduct]="selectedProduct"
+  (closeModal)="closeEditConfirmationModal($event)"></app-update>

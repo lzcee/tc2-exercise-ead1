@@ -1,5 +1,4 @@
 import { ApiService } from './../../services/api.service';
-import { Product } from './../../models/Product';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
@@ -34,7 +33,7 @@ export class RegisterComponent {
             this.registerFormMessage = '';
           }, 1500);
         } else {
-          this.registerFormMessage = 'O cadastro não realizado.';
+          this.registerFormMessage = 'O cadastro não foi realizado.';
         }
       });
     } else {

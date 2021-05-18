@@ -6,9 +6,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ListComponent } from './components/list/list.component';
+import { UpdateComponent } from './components/update/update.component';
 
 @NgModule({
-  declarations: [AppComponent, RegisterComponent, ListComponent],
+  declarations: [AppComponent, RegisterComponent, ListComponent, UpdateComponent],
   imports: [BrowserModule, HttpClientModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],

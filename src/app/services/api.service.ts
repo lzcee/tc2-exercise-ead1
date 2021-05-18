@@ -31,7 +31,7 @@ export class ApiService {
     });
   }
 
-  updateProduct(product: Product): Observable<any> {
+  updateProduct(product): Observable<any> {
     let body = new HttpParams();
     body = body.set('title', product.title);
     body = body.set('price', product.price.toString());
