@@ -1,6 +1,6 @@
 <section class="modal">
   <div class="modal__wrapper">
-    <button class="modal__close" (click)="closeDeleteConfirmationModal()">Cancelar</button>
+    <button class="modal__close" (click)="closeUpdateConfirmationModal()">Cancelar</button>
     <p>Editando o produto:</p>
     <form class="update__form" [formGroup]="updateForm" (ngSubmit)="onSubmit()">
       <label>
@@ -15,7 +15,6 @@
         Descrição
         <input required type="text" formControlName="description">
       </label>
-      <input type="hidden" formControlName="_id">
       <input type="submit" value="Atualizar">
     </form>
     <p *ngIf="updateFormMessage" class="update__form">{{ updateFormMessage }}</p>

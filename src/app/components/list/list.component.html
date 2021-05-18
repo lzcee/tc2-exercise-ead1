@@ -21,12 +21,7 @@
     </tbody>
   </table>
 </section>
-<div *ngIf="deleteConfirmation" class="modal">
-  <div class="modal__wrapper">
-    <p>Deseja deletar o produto {{selectedProduct.title}}?</p>
-    <button class="modalBox__button modalBox__button--primary" (click)="delete(selectedProduct._id)">Sim</button>
-    <button class="modalBox__button modalBox__button--secondary" (click)="closeDeleteConfirmationModal()">Não</button>
-  </div>
-</div>
+<app-delete *ngIf="deleteConfirmation" [selectedProduct]="selectedProduct"
+  (closeDeleteModal)="closeDeleteConfirmationModal($event)"></app-delete>
 <app-update *ngIf="editConfirmation" [selectedProduct]="selectedProduct"
   (closeModal)="closeEditConfirmationModal($event)"></app-update>

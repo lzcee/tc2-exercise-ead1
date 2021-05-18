@@ -21,13 +21,6 @@ export class ListComponent implements OnInit {
     });
   }
 
-  delete(productId: string) {
-    this.api.deleteProduct(productId).subscribe((response) => {
-      console.log(response);
-      this.getProducts();
-    });
-  }
-
   openDeleteConfirmationModal(product: Product) {
     this.deleteConfirmation = true;
     this.selectedProduct = product;

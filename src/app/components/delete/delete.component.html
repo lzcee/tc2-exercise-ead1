@@ -1,0 +1,10 @@
+<section class="modal">
+  <div class="modal__wrapper">
+    <p>Deseja deletar o produto <strong>{{selectedProduct.title}}</strong>?</p>
+    <div class="buttons">
+      <button class="button button--secondary" (click)="closeDeleteConfirmationModal()">Não</button>
+      <button class="button button--primary" (click)="delete(selectedProduct._id)">Sim</button>
+    </div>
+    <p *ngIf="deleteMessage">{{ deleteMessage }}</p>
+  </div>
+</section>
