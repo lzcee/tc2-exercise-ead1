@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class ApiService {
   constructor(private http: HttpClient) {}
 
-  baseUrl = 'http://leticia-cellurale-ead-backend.herokuapp.com/api';
+  baseUrl = 'https://leticia-cellurale-ead-backend.herokuapp.com/api';
 
   getProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(`${this.baseUrl}/produtos`);
